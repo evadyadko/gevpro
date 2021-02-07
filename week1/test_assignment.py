@@ -1,7 +1,9 @@
+import unittest
 import os
 import re
 import json
 import pytest
+from pets import Pet, Dog, Cat
 
 STUDENT_NUMBER_PATTERN = re.compile(r's\d{7}$')
 
@@ -49,3 +51,32 @@ class TestText:
         with open('me.txt') as f:
             text = f.read()
         assert text.strip(), 'me.txt is empty'
+
+class TestPet(unittest.TestCase):
+    def test_greeting(self):
+        pet1 = Pet('Felix')
+        pet2 = Pet('Moesja')
+
+        self.assertEqual(pet1.greeting(), 'I am Felix')
+        self.assertEqual(pet2.greeting(), 'I am Moesja')
+
+class TestDog(unittest.TestCase):
+    def test_sound(self):
+        pet1 = Dog('Oscar')
+
+        self.assertEqual(pet1.sound(), 'Woof')
+
+class TestCat(unittest.TestCase):
+    def test_sound(self):
+        pet1 = Cat('Felix')
+
+        self.assertEqual(pet1.sound(), 'Meow')
+
+
+
+
+    
+
+
+
+
