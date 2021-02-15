@@ -1,3 +1,3 @@
 # gevpro
-Gevorderd programmeren week 1
+Gevorderd programmeren, Eva Dyadko
 git clone https://github.com/evadyadko/gevpro.git
